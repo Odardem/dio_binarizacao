@@ -6,7 +6,7 @@ import numpy as np
 def convert_to_grey(image):
     image = np.asarray(image)
     r,g,b = image[:,:,0],image[:,:,1],image[:,:,2]
-    cinza = r * 0.2125 + g * 0.7154 + g * 0.0721
+    cinza = r * 0.2125 + g * 0.7154 + b * 0.0721
     img = Image.fromarray(cinza.astype(np.uint8))
     return img
 
